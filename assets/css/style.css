@@ -1,0 +1,88 @@
+body {
+    background-image: url("../images/congruent_pentagon.png");
+}
+
+#banner {
+    background-color: #c86f3a;
+    color: #ffffff;
+    width: 210px;
+    height: 65px;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 5px;
+    text-align: center;
+    line-height: 65px;
+}
+
+#instructions {
+	color: #5d955b;
+	background-color: #f9e5ce;
+	margin: 5px;
+    width: 322px;
+    height: 320px;
+    padding: 5px;
+    font-size: 13px;
+    font-weight: bold;
+    white-space: pre-wrap;
+}
+
+#gameNumber {
+	color: black;
+	background-color: #60c780;
+	margin: 5px;
+    width: 150px;
+    height: 65px;
+    padding: 5px;
+    font-size: 24px;
+    font-weight: bold;
+    float: left;
+}
+
+#gameBoard {
+	color: black;
+	background-color: #56fdfd;
+	margin: 5px;
+    width: 50px;
+    height: 65px;
+    padding: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    float: left;
+}
+
+#crystalContainer {
+	clear: both;
+    margin: 5px;
+}
+
+#scoreBanner {
+	clear: both;
+    background-color: #2a9b8c;
+    color: #ffffff;
+    width: 165px;
+    height: 14px;
+    font-size: 12px;
+    padding: 5px;
+    margin: 5px;
+    text-align: left;
+    line-height: 14px;
+}
+
+#gameScore {
+	clear: both;
+    background-color: #2a9b8c;
+    color: #ffffff;
+    width: 165px;
+    height: 100px;
+    font-size: 24px;
+    margin: 5px;
+    padding: 5px;
+    text-align: left;
+}
+
+.crystal {
+	float: left;
+    width: 60px;
+    height: 60px;
+    margin: 5px;	
+}
