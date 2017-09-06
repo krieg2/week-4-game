@@ -16,10 +16,13 @@ var game = {
     $("#gameNumber").text(this.number.toString());
     $("#gameScore").text(this.score.toString());
 
+    var arr = [];
     for(var i=0; i<this.images.length; i++){
 
+        var val = this.generateUniqueRandomNumber(1, 12, arr);
+        arr.push(val);
+
         var $imgTag = $("<img>");
-        var val = this.generateRandomNumber(1, 12);
         var element = "#crystal_" + (i + 1).toString();
         $(element).empty();
 
@@ -36,6 +39,17 @@ var game = {
   generateRandomNumber: function(min, max) {
 
     var n = Math.floor(Math.random() * (max-min+1)) + min;
+
+    return n;
+  },
+
+  generateUniqueRandomNumber: function(min, max, arr) {
+
+    var n=0;
+
+    while(n===0 || arr.includes(n)){
+      n = this.generateRandomNumber(min, max);
+    }
 
     return n;
   },
