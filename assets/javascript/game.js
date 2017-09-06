@@ -15,6 +15,7 @@ var game = {
 
     $("#gameNumber").text(this.number.toString());
     $("#gameScore").text(this.score.toString());
+    $("#gameStatus").text("");
 
     var arr = [];
     for(var i=0; i<this.images.length; i++){
@@ -63,10 +64,12 @@ var game = {
         this.reset();
         wins++;
         $("#wins").text(wins.toString());
+        $("#gameStatus").text("You won!!");
     } else if(this.score > this.number){
         this.reset();
         losses++;
         $("#losses").text(losses.toString());
+        $("#gameStatus").text("You lost!!");
     }
   }
 };

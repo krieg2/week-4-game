@@ -31,7 +31,7 @@ body {
 	background-color: #60c780;
 	margin: 5px;
     width: 150px;
-    height: 65px;
+    height: 75px;
     padding: 5px;
     font-size: 24px;
     font-weight: bold;
@@ -42,11 +42,12 @@ body {
 	color: black;
 	background-color: #56fdfd;
 	margin: 5px;
-    width: 50px;
-    height: 65px;
-    padding: 5px;
+    width: 55px;
+    height: 75px;
+    padding: 4px;
     font-size: 12px;
     float: left;
+    line-height: 18px;
 }
 
 #crystalContainer {
@@ -72,7 +73,7 @@ body {
     background-color: #2a9b8c;
     color: #ffffff;
     width: 165px;
-    height: 100px;
+    height: 80px;
     font-size: 24px;
     margin: 5px;
     padding: 5px;
@@ -85,3 +86,8 @@ body {
     height: 60px;
     margin: 5px;	
 }
+
+#gameStatus, #winDiv, #lossDiv {
+    margin-top: 8px;
+}
+
