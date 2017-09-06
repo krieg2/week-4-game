@@ -12,23 +12,25 @@ var game = {
 
     this.number = this.generateRandomNumber(19, 120);
     this.score = 0;
+
     $("#gameNumber").text(this.number.toString());
     $("#gameScore").text(this.score.toString());
 
     for(var i=0; i<this.images.length; i++){
 
-        var $divTag = $("<div>");
         var $imgTag = $("<img>");
-
         var val = this.generateRandomNumber(1, 12);
+        var element = "#crystal_" + (i + 1).toString();
+        $(element).empty();
 
         $imgTag.attr("cValue", val);
         $imgTag.attr("src", "assets/images/" + this.images[i]);
         $imgTag.attr("class", "crystal");
-        $imgTag.appendTo($divTag);
-
-        $divTag.appendTo("#crystalContainer");
+        $imgTag.appendTo(element);
     }
+
+    $("#wins").text(wins.toString());
+    $("#losses").text(losses.toString());
   },
 
   generateRandomNumber: function(min, max) {
@@ -42,12 +44,15 @@ var game = {
 
     this.score += num;
     $("#gameScore").text(this.score.toString());
+
     if(this.score === this.number){
         this.reset();
         wins++;
+        $("#wins").text(wins.toString());
     } else if(this.score > this.number){
         this.reset();
         losses++;
+        $("#losses").text(losses.toString());
     }
   }
 };
@@ -56,9 +61,9 @@ $(document).ready(function() {
 
   game.reset();
 
-  $(".crystal").on("click", function() {
+  $(".crystalDiv").on("click", function() {
 
-    var cValue = parseInt($(this).attr("cValue"));
+    var cValue = parseInt($("> .crystal", this).attr("cValue"));
     game.updateScore(cValue);
   });
 });
